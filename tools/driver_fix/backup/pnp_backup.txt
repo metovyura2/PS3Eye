@@ -1,0 +1,35 @@
+﻿=== DEVICES VID_1415 (before) ===
+
+
+Status       : Unknown
+Class        : libusb-win32 devices
+FriendlyName : USB Camera-B4.09.24.1 (Interface 0)
+InstanceId   : USB\VID_1415&PID_2000&MI_00\6&22516C2B&1&0000
+
+Status       : Unknown
+Class        : MEDIA
+FriendlyName : USB Camera-B4.09.24.1
+InstanceId   : USB\VID_1415&PID_2000&MI_01\6&22516C2B&1&0001
+
+Status       : Error
+Class        : USB
+FriendlyName : Составное USB устройство
+InstanceId   : USB\VID_1415&PID_2000\5&389AB2C2&0&5
+
+Status       : Unknown
+Class        : USB
+FriendlyName : Составное USB устройство
+InstanceId   : USB\VID_1415&PID_2000\5&389AB2C2&0&6
+
+Status       : Unknown
+Class        : MEDIA
+FriendlyName : USB Camera-B4.09.24.1
+InstanceId   : USB\VID_1415&PID_2000&MI_01\6&F97BB86&1&0001
+
+Status       : Unknown
+Class        : libusb-win32 devices
+FriendlyName : USB Camera-B4.09.24.1 (Interface 0)
+InstanceId   : USB\VID_1415&PID_2000&MI_00\6&F97BB86&1&0000
+
+
+

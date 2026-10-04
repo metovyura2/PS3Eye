@@ -1,0 +1,1194 @@
+﻿=== DRIVERS (before) ===
+╤ыєцхсэр  яЁюуЁрььр PnP (╠рщъЁюёюЇЄ)
+
+╬яєсышъютрээюх шь :     oem108.inf
+╚ёїюфэюх шь :      adafruitcircuitplayground.inf
+╚ь  яюёЄрт∙шър:      Adafruit Industries LLC
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     02/25/2016 6.2.2600.0
+╚ь  яюфяшёрт°хую:        Adafruit Industries
+
+╬яєсышъютрээюх шь :     oem116.inf
+╚ёїюфэюх шь :      arduino-org.inf
+╚ь  яюёЄрт∙шър:      Arduino Srl (www.arduino.org)
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     03/19/2015 1.1.1.0
+╚ь  яюфяшёрт°хую:        Arduino srl
+
+╬яєсышъютрээюх шь :     oem122.inf
+╚ёїюфэюх шь :      arduino.inf
+╚ь  яюёЄрт∙шър:      Arduino LLC (www.arduino.cc)
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     11/24/2015 1.2.3.0
+╚ь  яюфяшёрт°хую:        Arduino SA
+
+╬яєсышъютрээюх шь :     oem97.inf
+╚ёїюфэюх шь :      cdc-acm.inf
+╚ь  яюёЄрт∙шър:      MediaTek Inc.
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/04/2023 3.0.1512.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem117.inf
+╚ёїюфэюх шь :      ch341ser.inf
+╚ь  яюёЄрт∙шър:      wch.cn
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/16/2024 3.9.2024.9
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem10.inf
+╚ёїюфэюх шь :      cometlakepch-hsystem.inf
+╚ь  яюёЄрт∙шър:      INTEL
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/18/1968 10.1.31.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem11.inf
+╚ёїюфэюх шь :      cometlakepch-hsystemthermal.inf
+╚ь  яюёЄрт∙шър:      INTEL
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/18/1968 10.1.31.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem9.inf
+╚ёїюфэюх шь :      cometlakesystem.inf
+╚ь  яюёЄрт∙шър:      INTEL
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/18/1968 10.1.30.3
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem131.inf
+╚ёїюфэюх шь :      ftdibus.inf
+╚ь  яюёЄрт∙шър:      FTDI
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     10/28/2024 2.12.36.20
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem132.inf
+╚ёїюфэюх шь :      ftdiport.inf
+╚ь  яюёЄрт∙шър:      FTDI
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     10/28/2024 2.12.36.20
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem123.inf
+╚ёїюфэюх шь :      genuino.inf
+╚ь  яюёЄрт∙шър:      Arduino LLC (www.arduino.cc)
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/07/2016 1.0.3.0
+╚ь  яюфяшёрт°хую:        Arduino LLC
+
+╬яєсышъютрээюх шь :     oem53.inf
+╚ёїюфэюх шь :      hdbusext.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╨рё°шЁхэш 
+GUID ъырёёр:         {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+╚─ Ёрё°шЁхэш :       {69cb4edd-bafe-4f9a-9135-c1f284d6860d}
+┬хЁёш  фЁрщтхЁр:     01/14/2022 30.0.101.1273
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem135.inf
+╚ёїюфэюх шь :      hdx_gigabyteext_rtk.inf
+╚ь  яюёЄрт∙шър:      Realtek Semiconductor Corp.
+╚ь  ъырёёр:         ╨рё°шЁхэш 
+GUID ъырёёр:         {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+╚─ Ёрё°шЁхэш :       {c3a63edd-2d27-4b66-b155-5e94b43d926a}
+┬хЁёш  фЁрщтхЁр:     08/17/2021 6.0.9225.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem14.inf
+╚ёїюфэюх шь :      heci.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     05/11/2021 2120.100.0.1085
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem13.inf
+╚ёїюфэюх шь :      ialpss2_gpio2_cnl.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/02/2021 30.100.2132.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem6.inf
+╚ёїюфэюх шь :      iigd_ext.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╨рё°шЁхэш 
+GUID ъырёёр:         {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+╚─ Ёрё°шЁхэш :       {7833a3f6-4ede-47d6-a341-11cc5e7fd0b7}
+┬хЁёш  фЁрщтхЁр:     01/04/2021 27.20.100.9127
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem63.inf
+╚ёїюфэюх шь :      lci_proxywddm.inf
+╚ь  яюёЄрт∙шър:      LuminonCore
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     12/04/2018 1.0.2018.1204
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem124.inf
+╚ёїюфэюх шь :      linino.inf
+╚ь  яюёЄрт∙шър:      Linino
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/13/2014 1.0.0.0
+╚ь  яюфяшёрт°хую:        Arduino srl
+
+╬яєсышъютрээюх шь :     oem77.inf
+╚ёїюфэюх шь :      m6500ews.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     03/03/2023 1.14.21.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem126.inf
+╚ёїюфэюх шь :      medbg_virtual_com_port.inf
+╚ь  яюёЄрт∙шър:      Atmel Corp.
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     06/14/2013 6.0.0.1
+╚ь  яюфяшёрт°хую:        Arduino AG
+
+╬яєсышъютрээюх шь :     oem111.inf
+╚ёїюфэюх шь :      nvppc.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     08/14/2024 1.52.831.832
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem25.inf
+╚ёїюфэюх шь :      nvswcfilter.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╠√°ш ш шэ√х єърч√тр■∙шх єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96f-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     11/15/2021 8.17.3065.4007
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem24.inf
+╚ёїюфэюх шь :      nvvhci.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/10/2020 3.4.2785.9920
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem27.inf
+╚ёїюфэюх шь :      nvvhci.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/21/2022 3.5.3090.2760
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem101.inf
+╚ёїюфэюх шь :      qcfilter.inf
+╚ь  яюёЄрт∙шър:      Qualcomm Incorporated
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     08/24/2023 1.0.7.7
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem104.inf
+╚ёїюфэюх шь :      qcser.inf
+╚ь  яюёЄрт∙шър:      Qualcomm Incorporated
+╚ь  ъырёёр:         ╧юЁЄ√ (COM ш LPT)
+GUID ъырёёр:         {4d36e978-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/24/2023 2.1.5.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem106.inf
+╚ёїюфэюх шь :      qdbusb.inf
+╚ь  яюёЄрт∙шър:      QUALCOMM
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр USB
+GUID ъырёёр:         {88bae032-5a81-49f0-bc3d-a4ff138216d6}
+┬хЁёш  фЁрщтхЁр:     08/24/2023 1.0.3.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem85.inf
+╚ёїюфэюх шь :      redmi_note_13_pro.inf
+╚ь  яюёЄрт∙шър:      libwdi
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр USB
+GUID ъырёёр:         {88bae032-5a81-49f0-bc3d-a4ff138216d6}
+┬хЁёш  фЁрщтхЁр:     06/02/2012 6.1.7600.16385
+╚ь  яюфяшёрт°хую:        USB\VID_18D1&PID_4EE7 (libwdi autogenerated)
+
+╬яєсышъютрээюх шь :     oem127.inf
+╚ёїюфэюх шь :      renesas.inf
+╚ь  яюёЄрт∙шър:      Arduino
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр USB
+GUID ъырёёр:         {88bae032-5a81-49f0-bc3d-a4ff138216d6}
+┬хЁёш  фЁрщтхЁр:     03/03/2020 10.48.0.0
+╚ь  яюфяшёрт°хую:        Arduino SA
+
+╬яєсышъютрээюх шь :     oem12.inf
+╚ёїюфэюх шь :      skylakesystem.inf
+╚ь  яюёЄрт∙шър:      INTEL
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/18/1968 10.1.7.4
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem29.inf
+╚ёїюфэюх шь :      skylakesystem.inf
+╚ь  яюёЄрт∙шър:      INTEL
+╚ь  ъырёёр:         ╤шёЄхьэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {4d36e97d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     10/03/2016 10.1.1.38
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem59.inf
+╚ёїюфэюх шь :      ssudbus.inf
+╚ь  яюёЄрт∙шър:      SAMSUNG Electronics Co., Ltd. 
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     09/26/2022 2.19.1.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem146.inf
+╚ёїюфэюх шь :      usbaapl64.inf
+╚ь  яюёЄрт∙шър:      Apple, Inc.
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     05/19/2017 6.0.9999.69
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem57.inf
+╚ёїюфэюх шь :      wibukeyusb.inf
+╚ь  яюёЄрт∙шър:      WIBU-SYSTEMS AG
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ USB
+GUID ъырёёр:         {36fc9e60-c465-11cf-8056-444553540000}
+┬хЁёш  фЁрщтхЁр:     12/14/2016 6.40.2400.500
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem33.inf
+╚ёїюфэюх шь :      winusb_generic_device.inf
+╚ь  яюёЄрт∙шър:      libwdi
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр USB
+GUID ъырёёр:         {88bae032-5a81-49f0-bc3d-a4ff138216d6}
+┬хЁёш  фЁрщтхЁр:     06/02/2012 6.1.7600.16385
+╚ь  яюфяшёрт°хую:        USB\MS_COMP_WINUSB (libwdi autogenerated)
+
+╬яєсышъютрээюх шь :     oem32.inf
+╚ёїюфэюх шь :      xppentablet.inf
+╚ь  яюёЄрт∙шър:      XPPen Technologies
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр HID (Human Interface Devices)
+GUID ъырёёр:         {745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+┬хЁёш  фЁрщтхЁр:     05/28/2021 6.1.7600.16385
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem20.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/05/2024 10.0.22013.4
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem144.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/16/2026 10.0.22029.3
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem142.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     06/05/2026 10.0.22027.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem65.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     02/13/2024 10.0.22014.7
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem86.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     03/14/2024 10.0.22016.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem16.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     05/09/2024 10.0.22018.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem88.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     04/29/2024 10.0.22017.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem80.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     03/07/2024 10.0.22015.8
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem28.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/17/2025 10.0.22021.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem119.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/11/2025 10.0.22024.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem128.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     12/08/2025 10.0.22026.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem118.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/05/2025 10.0.22023.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem66.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     10/14/2025 10.0.22025.3
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem107.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/16/2024 10.0.22019.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem82.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     11/25/2024 10.0.22020.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem67.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     02/22/2024 10.0.22014.9
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem133.inf
+╚ёїюфэюх шь :      xvdd.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╩юэЄЁюыыхЁ√ чряюьшэр■∙шї єёЄЁющёЄт
+GUID ъырёёр:         {4d36e97b-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     04/23/2026 10.0.22028.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem5.inf
+╚ёїюфэюх шь :      adobepdf.inf
+╚ь  яюёЄрт∙шър:      Adobe
+╚ь  ъырёёр:         ╧ЁшэЄхЁ√
+GUID ъырёёр:         {4d36e979-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     11/25/2019 19.3.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem81.inf
+╚ёїюфэюх шь :      android_winusb.inf
+╚ь  яюёЄрт∙шър:      OPLUS, Inc.
+╚ь  ъырёёр:         Android Phone
+GUID ъырёёр:         {3f966bd9-fa04-4ec5-991c-d326973b5128}
+┬хЁёш  фЁрщтхЁр:     01/04/2023 11.0.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem125.inf
+╚ёїюфэюх шь :      arduino_gemma.inf
+╚ь  яюёЄрт∙шър:      libusb-win32
+╚ь  ъырёёр:         libusb-win32 devices
+GUID ъырёёр:         {eb781aaf-9c70-4523-a5df-642a87eca567}
+┬хЁёш  фЁрщтхЁр:     04/21/2015 1.0.0.0
+╚ь  яюфяшёрт°хую:        Arduino LLC
+
+╬яєсышъютрээюх шь :     oem3.inf
+╚ёїюфэюх шь :      cui_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     01/04/2021 27.20.100.9127
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem50.inf
+╚ёїюфэюх шь :      cui_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     01/14/2022 30.0.101.1273
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem22.inf
+╚ёїюфэюх шь :      cui_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     02/18/2021 27.20.100.9316
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem17.inf
+╚ёїюфэюх шь :      dal.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     07/11/2023 1.44.2023.710
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem15.inf
+╚ёїюфэюх шь :      dal.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     01/21/2021 1.41.2021.121
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem35.inf
+╚ёїюфэюх шь :      davincikeyboards.inf
+╚ь  яюёЄрт∙шър:      Blackmagic Design
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     10/12/2021 1.4.1.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem37.inf
+╚ёїюфэюх шь :      davincipanel.inf
+╚ь  яюёЄрт∙шър:      Blackmagic Design
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     04/16/2019 15.3.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem34.inf
+╚ёїюфэюх шь :      davincipanels.inf
+╚ь  яюёЄрт∙шър:      Blackmagic Design
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/22/2021 2.0.1.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem112.inf
+╚ёїюфэюх шь :      drv1172.inf
+╚ь  яюёЄрт∙шър:      libusb-win32
+╚ь  ъырёёр:         libusb-win32 devices
+GUID ъырёёр:         {eb781aaf-9c70-4523-a5df-642a87eca567}
+┬хЁёш  фЁрщтхЁр:     06/17/2021 1.2.6.0
+╚ь  яюфяшёрт°хую:        USB\VID_1415&PID_2000&MI_00 (libwdi autogenerated)
+
+╬яєсышъютрээюх шь :     oem19.inf
+╚ёїюфэюх шь :      e1d68x64.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/05/2021 12.19.1.35
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem36.inf
+╚ёїюфэюх шь :      fairlightpanels.inf
+╚ь  яюёЄрт∙шър:      Blackmagic Design
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/31/2021 1.6.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem83.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     11/13/2024 10.0.22018.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem87.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     03/18/2024 10.0.22017.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem143.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     05/01/2026 10.0.22019.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem47.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     10/13/2023 10.0.22015.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem134.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     04/20/2026 10.0.22019.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem84.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     03/05/2024 10.0.22016.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem145.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     08/06/2026 10.0.22021.3
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem130.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     03/04/2026 10.0.22018.2
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem129.inf
+╚ёїюфэюх шь :      gameflt.inf
+╚ь  яюёЄрт∙шър:      Xbox
+╚ь  ъырёёр:         ╘шы№ЄЁ√ HSM ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {d546500a-2aeb-45f6-9482-f4b1799c3177}
+┬хЁёш  фЁрщтхЁр:     02/04/2026 10.0.22018.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem42.inf
+╚ёїюфэюх шь :      grdkey.inf
+╚ь  яюёЄрт∙шър:      Aktiv Company
+╚ь  ъырёёр:         Guardant dongles
+GUID ъырёёр:         {c29cc2e3-bc48-4b74-9043-2c6413ffa784}
+┬хЁёш  фЁрщтхЁр:     04/17/2023 7.0.224.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem113.inf
+╚ёїюфэюх шь :      grdusb.inf
+╚ь  яюёЄрт∙шър:      Aktiv Company
+╚ь  ъырёёр:         Guardant dongles
+GUID ъырёёр:         {c29cc2e3-bc48-4b74-9043-2c6413ffa784}
+┬хЁёш  фЁрщтхЁр:     04/17/2023 7.0.224.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem114.inf
+╚ёїюфэюх шь :      grdwinusb.inf
+╚ь  яюёЄрт∙шър:      Aktiv Company
+╚ь  ъырёёр:         Guardant dongles (WinUSB)
+GUID ъырёёр:         {9d73286c-e1ed-4f06-9f83-51376a7a0beb}
+┬хЁёш  фЁрщтхЁр:     04/17/2023 7.0.224.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem136.inf
+╚ёїюфэюх шь :      hdxgigabyte.inf
+╚ь  яюёЄрт∙шър:      Realtek Semiconductor Corp.
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/17/2021 6.0.9225.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem7.inf
+╚ёїюфэюх шь :      iclsclient.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     09/07/2021 1.63.1155.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem93.inf
+╚ёїюфэюх шь :      iclsclient.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     12/06/2023 1.71.99.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem4.inf
+╚ёїюфэюх шь :      igcc_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     01/04/2021 27.20.100.9127
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem23.inf
+╚ёїюфэюх шь :      igcc_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     02/18/2021 27.20.100.9316
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem51.inf
+╚ёїюфэюх шь :      igcc_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     01/14/2022 30.0.101.1273
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem44.inf
+╚ёїюфэюх шь :      iigd_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ┬шфхюрфряЄхЁ√
+GUID ъырёёр:         {4d36e968-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/14/2022 30.0.101.1273
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem2.inf
+╚ёїюфэюх шь :      iigd_dch.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ┬шфхюрфряЄхЁ√
+GUID ъырёёр:         {4d36e968-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/04/2021 27.20.100.9127
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem54.inf
+╚ёїюфэюх шь :      intcdaud.inf
+╚ь  яюёЄрт∙шър:      Intel(R) Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/29/2021 11.2.0.9
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem8.inf
+╚ёїюфэюх шь :      intcdaud.inf
+╚ь  яюёЄрт∙шър:      Intel(R) Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     02/25/2020 10.27.0.9
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem55.inf
+╚ёїюфэюх шь :      intcdaud.inf
+╚ь  яюёЄрт∙шър:      Intel(R) Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/29/2021 10.27.0.11
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem141.inf
+╚ёїюфэюх шь :      ksusbaud.inf
+╚ь  яюёЄрт∙шър:      Creative Technology Ltd.
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     04/08/2022 1.16.4.35
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem62.inf
+╚ёїюфэюх шь :      lci_iddcx.inf
+╚ь  яюёЄрт∙шър:      LuminonCore
+╚ь  ъырёёр:         ┬шфхюрфряЄхЁ√
+GUID ъырёёр:         {4d36e968-e325-11ce-bfc1-08002be10318}
+┬хЁёш  ъырёёр:      2.0
+┬хЁёш  фЁрщтхЁр:     12/04/2018 1.0.2018.1204
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem94.inf
+╚ёїюфэюх шь :      lms.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     02/21/2024 2316.5.1.12
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem30.inf
+╚ёїюфэюх шь :      lms.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     09/01/2021 2130.1.16.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem68.inf
+╚ёїюфэюх шь :      m6200sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.52
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem78.inf
+╚ёїюфэюх шь :      m6500pr.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╧ЁшэЄхЁ√
+GUID ъырёёр:         {4d36e979-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     03/03/2023 1.14.21.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem39.inf
+╚ёїюфэюх шь :      m6500sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.52
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem74.inf
+╚ёїюфэюх шь :      m6518sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.66
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem69.inf
+╚ёїюфэюх шь :      m6550sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.54
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem75.inf
+╚ёїюфэюх шь :      m6568sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.59
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem76.inf
+╚ёїюфэюх шь :      m6595sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.0.8
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem79.inf
+╚ёїюфэюх шь :      m6600fax.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╧ЁшэЄхЁ√
+GUID ъырёёр:         {4d36e979-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     03/15/2017 2.4.1.9
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem70.inf
+╚ёїюфэюх шь :      m6600sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.52
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem18.inf
+╚ёїюфэюх шь :      mewmiprov.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     07/22/2021 2130.1.15.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem92.inf
+╚ёїюфэюх шь :      mewmiprov.inf
+╚ь  яюёЄрт∙шър:      Intel
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     02/21/2024 2408.5.4.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem71.inf
+╚ёїюфэюх шь :      ms6000sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.51
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem72.inf
+╚ёїюфэюх шь :      ms6550sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.51
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem73.inf
+╚ёїюфэюх шь :      ms6600sc.inf
+╚ь  яюёЄрт∙шър:      Pantum
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     06/20/2023 1.0.3.51
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem52.inf
+╚ёїюфэюх шь :      mshdadac.inf
+╚ь  яюёЄрт∙шър:      Intel Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     01/14/2022 30.0.101.1273
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem98.inf
+╚ёїюфэюх шь :      mtkmbim7_x64.inf
+╚ь  яюёЄрт∙шър:      MediaTek Inc.
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     05/07/2015 2.15.19.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem99.inf
+╚ёїюфэюх шь :      mtkmbimv_x64.inf
+╚ь  яюёЄрт∙шър:      MediaTek Inc.
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     05/07/2015 2.15.19.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem100.inf
+╚ёїюфэюх шь :      mtkmbimx_x64.inf
+╚ь  яюёЄрт∙шър:      MediaTek Inc.
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     05/07/2015 2.15.19.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem61.inf
+╚ёїюфэюх шь :      mvvad.inf
+╚ь  яюёЄрт∙шър:      Voicemod
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     06/01/2022 2022.6.1.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem147.inf
+╚ёїюфэюх шь :      netaapl64.inf
+╚ь  яюёЄрт∙шър:      Apple
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/15/2013 1.8.5.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem21.inf
+╚ёїюфэюх шь :      nvhda.inf
+╚ь  яюёЄрт∙шър:      NVIDIA Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/18/2022 1.3.39.16
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem121.inf
+╚ёїюфэюх шь :      nvhda.inf
+╚ь  яюёЄрт∙шър:      NVIDIA Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     06/01/2025 1.4.5.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem109.inf
+╚ёїюфэюх шь :      nvhda.inf
+╚ь  яюёЄрт∙шър:      NVIDIA Corporation
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/14/2024 1.4.0.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem49.inf
+╚ёїюфэюх шь :      nvmoduletracker.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         NvModuleTracker
+GUID ъырёёр:         {aa018edf-4915-415e-9c17-d7ebec8917d2}
+┬хЁёш  фЁрщтхЁр:     05/13/2022 6.14.25214.24630
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem43.inf
+╚ёїюфэюх шь :      nvmoduletracker.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         NvModuleTracker
+GUID ъырёёр:         {aa018edf-4915-415e-9c17-d7ebec8917d2}
+┬хЁёш  фЁрщтхЁр:     08/11/2020 6.14.24370.22713
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem90.inf
+╚ёїюфэюх шь :      nvmoduletracker.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         NvModuleTracker
+GUID ъырёёр:         {aa018edf-4915-415e-9c17-d7ebec8917d2}
+┬хЁёш  фЁрщтхЁр:     01/30/2024 6.14.26040.64835
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem110.inf
+╚ёїюфэюх шь :      nvpcf.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╧ЁюуЁрььэ√х єёЄЁющёЄтр
+GUID ъырёёр:         {62f9c741-b25a-46ce-b54c-9bccce08b6f2}
+┬хЁёш  фЁрщтхЁр:     08/14/2024 32.0.15.6046
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem46.inf
+╚ёїюфэюх шь :      nvvad.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/22/2022 4.49.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem89.inf
+╚ёїюфэюх шь :      nvvad.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     02/28/2024 4.65.0.3
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem45.inf
+╚ёїюфэюх шь :      nvvad.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/12/2022 4.45.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem41.inf
+╚ёїюфэюх шь :      nvvad.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/13/2021 4.39.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem120.inf
+╚ёїюфэюх шь :      nv_dispi.inf
+╚ь  яюёЄрт∙шър:      NVIDIA
+╚ь  ъырёёр:         ┬шфхюрфряЄхЁ√
+GUID ъырёёр:         {4d36e968-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     10/09/2025 32.0.15.8157
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem1.inf
+╚ёїюфэюх шь :      prnms001.inf
+╚ь  яюёЄрт∙шър:      Microsoft
+╚ь  ъырёёр:         ╧ЁшэЄхЁ√
+GUID ъырёёр:         {4d36e979-e325-11ce-bfc1-08002be10318}
+┬хЁёш  ъырёёр:      4.0
+┬хЁёш  фЁрщтхЁр:     06/21/2006 10.0.19041.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows
+
+╬яєсышъютрээюх шь :     oem38.inf
+╚ёїюфэюх шь :      prnms006.inf
+╚ь  яюёЄрт∙шър:      Microsoft
+╚ь  ъырёёр:         ╧ЁшэЄхЁ√
+GUID ъырёёр:         {4d36e979-e325-11ce-bfc1-08002be10318}
+┬хЁёш  ъырёёр:      4.0
+┬хЁёш  фЁрщтхЁр:     11/29/2016 16.0.7629.4000
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem0.inf
+╚ёїюфэюх шь :      prnms009.inf
+╚ь  яюёЄрт∙шър:      Microsoft
+╚ь  ъырёёр:         ╧ЁшэЄхЁ√
+GUID ъырёёр:         {4d36e979-e325-11ce-bfc1-08002be10318}
+┬хЁёш  ъырёёр:      4.0
+┬хЁёш  фЁрщтхЁр:     06/21/2006 10.0.19041.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows
+
+╬яєсышъютрээюх шь :     oem140.inf
+╚ёїюфэюх шь :      ps3eyecamera.inf
+╚ь  яюёЄрт∙шър:      Code Laboratories, Inc.
+╚ь  ъырёёр:         ╙ёЄЁющёЄтр юсЁрсюЄъш шчюсЁрцхэшщ
+GUID ъырёёр:         {6bdd1fc6-810f-11d0-bec7-08002be2092f}
+┬хЁёш  фЁрщтхЁр:     12/06/2012 5.3.0.341
+╚ь  яюфяшёрт°хую:        Code Laboratories, Inc.
+
+╬яєсышъютрээюх шь :     oem102.inf
+╚ёїюфэюх шь :      qcmdm.inf
+╚ь  яюёЄрт∙шър:      Qualcomm Incorporated
+╚ь  ъырёёр:         ╠юфхь√
+GUID ъырёёр:         {4d36e96d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/24/2023 2.1.5.1
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem103.inf
+╚ёїюфэюх шь :      qcnet.inf
+╚ь  яюёЄрт∙шър:      Qualcomm
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/24/2023 4.0.7.6
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem105.inf
+╚ёїюфэюх шь :      qcwwan.inf
+╚ь  яюёЄрт∙шър:      Qualcomm
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     08/24/2023 4.0.7.6
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem137.inf
+╚ёїюфэюх шь :      realtekapo.inf
+╚ь  яюёЄрт∙шър:      Realtek
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     08/17/2021 11.0.6000.951
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem139.inf
+╚ёїюфэюх шь :      realtekhsa.inf
+╚ь  яюёЄрт∙шър:      Realtek
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     07/27/2021 11.0.6000.254
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem138.inf
+╚ёїюфэюх шь :      realtekservice.inf
+╚ь  яюёЄрт∙шър:      Realtek
+╚ь  ъырёёр:         ╩юьяюэхэЄ√ яЁюуЁрььэюую юсхёяхўхэш 
+GUID ъырёёр:         {5c4c3332-344d-483c-8739-259e934c9cc8}
+┬хЁёш  фЁрщтхЁр:     08/18/2021 1.0.0.420
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem64.inf
+╚ёїюфэюх шь :      redmi_note_13_pro.inf
+╚ь  яюёЄрт∙шър:      libusb-win32
+╚ь  ъырёёр:         libusb-win32 devices
+GUID ъырёёр:         {eb781aaf-9c70-4523-a5df-642a87eca567}
+┬хЁёш  фЁрщтхЁр:     02/22/2024 1.4.0.0
+╚ь  яюфяшёрт°хую:        USB\VID_18D1&PID_4EE7 (libwdi autogenerated)
+
+╬яєсышъютрээюх шь :     oem58.inf
+╚ёїюфэюх шь :      ssudadb.inf
+╚ь  яюёЄрт∙шър:      SAMSUNG Electronics Co., Ltd. 
+╚ь  ъырёёр:         Android Phone
+GUID ъырёёр:         {3f966bd9-fa04-4ec5-991c-d326973b5128}
+┬хЁёш  фЁрщтхЁр:     09/26/2022 2.19.1.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem26.inf
+╚ёїюфэюх шь :      ssudadb.inf
+╚ь  яюёЄрт∙шър:      SAMSUNG Electronics Co., Ltd. 
+╚ь  ъырёёр:         Android Phone
+GUID ъырёёр:         {3f966bd9-fa04-4ec5-991c-d326973b5128}
+┬хЁёш  фЁрщтхЁр:     09/14/2021 2.17.16.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem40.inf
+╚ёїюфэюх шь :      ssudadb.inf
+╚ь  яюёЄрт∙шър:      SAMSUNG Electronics Co., Ltd. 
+╚ь  ъырёёр:         Android Phone
+GUID ъырёёр:         {3f966bd9-fa04-4ec5-991c-d326973b5128}
+┬хЁёш  фЁрщтхЁр:     11/06/2020 2.17.6.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem48.inf
+╚ёїюфэюх шь :      ssudmdm.inf
+╚ь  яюёЄрт∙шър:      SAMSUNG Electronics Co., Ltd. 
+╚ь  ъырёёр:         ╠юфхь√
+GUID ъырёёр:         {4d36e96d-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/26/2022 2.19.1.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem31.inf
+╚ёїюфэюх шь :      ssudrnds.inf
+╚ь  яюёЄрт∙шър:      SAMSUNG Electronics Co., Ltd. 
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     09/14/2021 2.17.16.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem91.inf
+╚ёїюфэюх шь :      tetherxp.inf
+╚ь  яюёЄрт∙шър:      MediaTek Inc.
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     07/14/2011 1.1129.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem95.inf
+╚ёїюфэюх шь :      usb_camera-b4_09_24_1_interface_0.inf
+╚ь  яюёЄрт∙шър:      libusb-win32
+╚ь  ъырёёр:         libusb-win32 devices
+GUID ъырёёр:         {eb781aaf-9c70-4523-a5df-642a87eca567}
+┬хЁёш  фЁрщтхЁр:     06/17/2021 1.2.6.0
+╚ь  яюфяшёрт°хую:        libusb-win32 (USB_Camera-B4_09_24_1_Interface_0.inf) [Self]
+
+╬яєсышъютрээюх шь :     oem115.inf
+╚ёїюфэюх шь :      virtualmic.inf
+╚ь  яюёЄрт∙шър:      EaseUS
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     05/06/2023 15.35.5.680
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem60.inf
+╚ёїюфэюх шь :      voiceaidriver.inf
+╚ь  яюёЄрт∙шър:      Voice.ai
+╚ь  ъырёёр:         ╟тєъют√х, шуЁют√х ш тшфхюєёЄЁющёЄтр
+GUID ъырёёр:         {4d36e96c-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     12/22/2022 16.36.0.99
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem56.inf
+╚ёїюфэюх шь :      wibukeysys.inf
+╚ь  яюёЄрт∙шър:      WIBU-SYSTEMS AG
+╚ь  ъырёёр:         ╘шы№ЄЁ√ чр∙шЄ√ юЄ ъюяшЁютрэш  ёыєцс√ ЇхфхЁрЎшш
+GUID ъырёёр:         {89786ff1-9c12-402f-9c9e-17753c7f4375}
+┬хЁёш  фЁрщтхЁр:     12/14/2016 6.40.2400.500
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+
+╬яєсышъютрээюх шь :     oem96.inf
+╚ёїюфэюх шь :      wintun.inf
+╚ь  яюёЄрт∙шър:      WireGuard LLC
+╚ь  ъырёёр:         ╤хЄхт√х рфряЄхЁ√
+GUID ъырёёр:         {4d36e972-e325-11ce-bfc1-08002be10318}
+┬хЁёш  фЁрщтхЁр:     10/13/2021 0.14.0.0
+╚ь  яюфяшёрт°хую:        Microsoft Windows Hardware Compatibility Publisher
+

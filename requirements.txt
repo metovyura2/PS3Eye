@@ -1,0 +1,6 @@
+# PSEyes — таймлапс с камеры Sony PS Eye (PS3)
+# Внешний ffmpeg устанавливается отдельно (см. README.md)
+
+PyQt6>=6.6
+opencv-python>=4.8
+numpy>=1.26

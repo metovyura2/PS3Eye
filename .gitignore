@@ -1,0 +1,28 @@
+# Служебные файлы ассистента — в репозиторий не попадают
+AGENT.md
+.cline/
+.clinerules
+.roo/
+.cursor/
+.aider*
+.claude*
+.github/copilot*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Данные приложения
+config.json
+sessions/
+temp/
+*.log
+
+# Сборка EXE
+dist/
+build/
+temp/build/
+*.spec
