@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "PSEyes — timelapse camera app for Sony PS Eye (PS3)"
+abstract: >-
+  Windows application for capturing timelapse with the Sony PlayStation Eye (PS3)
+  camera. Live preview via PyQt6 and OpenCV/DirectShow, interval JPEG frame capture,
+  and MP4 (H.264) assembly with ffmpeg. Includes PS Eye driver repair scripts for
+  Windows error code 10 (WinUSB) and automatic camera recovery.
+type: software
+authors:
+  - name: "metovyura2"
+repository-code: "https://github.com/metovyura2/PS3Eye"
+url: "https://github.com/metovyura2/PS3Eye"
+license: MIT
+version: 1.0.0
+date-released: "2026-10-04"
+keywords:
+  - ps3 eye
+  - ps3eye
+  - playstation eye
+  - sony ps eye
+  - timelapse
+  - time-lapse
+  - 3d printing
+  - 3d printer
+  - octolapse
+  - python
+  - pyqt6
+  - opencv
+  - directshow
+  - ffmpeg
+  - webcam
+  - usb camera
+  - h264
+  - windows
+  - winusb
+  - camera

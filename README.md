@@ -9,6 +9,8 @@
 > 3d printing, 3d printer, octolapse, python, pyqt6, opencv, directshow, ffmpeg, webcam,
 > usb camera, h264, windows, winusb, camera, video capture.
 
+![PSEyes — окно приложения: превью камеры, настройки и журнал](assets/preview.png)
+
 Программа принимает видео с камеры Sony PS Eye (PS3) напрямую, показывает превью
 и пишет таймлапс: кадры сохраняются в JPEG по таймеру, затем собираются в MP4 (H.264).
 
