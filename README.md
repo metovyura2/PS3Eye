@@ -1,5 +1,14 @@
 # PSEyes — таймлапс с камеры Sony PS Eye для стола 3D-принтера
 
+> **PSEyes** — timelapse camera app for the Sony PlayStation Eye (PS3) webcam on Windows.
+> Live preview (PyQt6 + OpenCV/DirectShow), interval JPEG capture, MP4 assembly via ffmpeg
+> (H.264). Built for 3D-printer table timelapse; includes PS Eye driver repair scripts
+> (Windows error code 10 / WinUSB), camera hot-recovery and manual capture properties.
+>
+> **Keywords:** ps3 eye, ps3eye, playstation eye, sony ps eye, timelapse, time-lapse,
+> 3d printing, 3d printer, octolapse, python, pyqt6, opencv, directshow, ffmpeg, webcam,
+> usb camera, h264, windows, winusb, camera, video capture.
+
 Программа принимает видео с камеры Sony PS Eye (PS3) напрямую, показывает превью
 и пишет таймлапс: кадры сохраняются в JPEG по таймеру, затем собираются в MP4 (H.264).
 
