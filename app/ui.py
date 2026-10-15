@@ -5,6 +5,7 @@ import datetime as dt
 import os
 import shutil
 import sys
+import threading
 import time
 
 import cv2
@@ -41,11 +42,32 @@ from .config import AppConfig, project_root
 from .recorder import TimelapseRecorder
 
 ROTATE_VALUES = [0, 90, 180, 270]
+# Запасной список режимов PS Eye — используется, если драйвер не ответил
+FALLBACK_RESOLUTIONS = [
+    (160, 120),
+    (176, 144),
+    (320, 240),
+    (352, 288),
+    (640, 480),
+    (800, 600),
+    (1024, 576),
+    (1280, 720),
+    (1600, 896),
+    (1920, 1080),
+    (2304, 1296),
+    (2304, 1536),
+]
 # Частота обновления превью (кадры камеры приходят чаще, GUI не должен захлёбываться)
 PREVIEW_FPS = 25
 # Журнал приложения дублируется в файл: после закрытия окна иначе ничего не проверить
 LOG_FILE = os.path.join(project_root(), "temp", "pseyes.log")
 LOG_MAX_BYTES = 1_000_000
+# Стартовый размер окна: фиксированный, не зависит от ширины монитора
+START_WIDTH = 1220
+START_HEIGHT = 780
+# Ниже этого окно не сжимается, иначе панель настроек и превью ломаются
+MIN_WIDTH = 900
+MIN_HEIGHT = 620
 
 
 def window_icon() -> QIcon | None:
@@ -73,13 +95,19 @@ class MainWindow(QMainWindow):
         self._last_frame = None
         self._capture_lost = False
         self._cam_fps = 0.0
+        self._last_device_name = ""
+        # Устройство и разрешение, для которых сейчас идёт фоновый опрос режимов
+        self._modes_pending = ("", "")
         self._shutting_down = False
 
         self.setWindowTitle("PSEyes — таймлапс с камеры Sony PS Eye")
         icon = window_icon()
         if icon is not None:
             self.setWindowIcon(icon)
-        self.resize(1220, 780)
+
+        # Стартовая геометрия фиксирована и подогнана под экран: окно никогда не
+        # открывается шире рабочего стола и остаётся пригодным для масштабирования
+        self._apply_initial_geometry()
 
         self._initializing = True
         self._build_ui()
@@ -99,6 +127,36 @@ class MainWindow(QMainWindow):
 
     # ------------------------------------------------------------------ UI
 
+    def _apply_initial_geometry(self) -> None:
+        """Задаёт фиксированный стартовый размер окна и центрирует его.
+
+        Размер считается от рабочего стола основного экрана и ограничен
+        сверху константой START_WIDTH/START_HEIGHT: при первом показе окно
+        не растягивается по ширине монитора, а открывается компактно. Дальше
+        пользователь может тянуть окно как обычно (min/max заданы ниже).
+        """
+        self.setMinimumSize(MIN_WIDTH, MIN_HEIGHT)
+
+        screen = QApplication.primaryScreen()
+        if screen is None:
+            base_width, base_height = self.config.window_size()
+            self.resize(base_width, base_height)
+            return
+
+        area = screen.availableGeometry()
+        base_width, base_height = self.config.window_size()
+        width = min(base_width, area.width())
+        height = min(base_height, area.height())
+        # Окно не шире рабочего стола, но и не уже минимума
+        width = max(width, min(MIN_WIDTH, area.width()))
+        height = max(height, min(MIN_HEIGHT, area.height()))
+        self.resize(width, height)
+
+        # Центрирование по рабочему столу (без панели задач)
+        left = area.x() + max((area.width() - width) // 2, 0)
+        top = area.y() + max((area.height() - height) // 2, 0)
+        self.move(left, top)
+
     def _build_ui(self) -> None:
         central = QWidget()
         self.setCentralWidget(central)
@@ -107,8 +165,12 @@ class MainWindow(QMainWindow):
         splitter = QSplitter(Qt.Orientation.Horizontal)
         splitter.addWidget(self._build_preview())
         splitter.addWidget(self._build_panel())
+        splitter.setChildrenCollapsible(False)
         splitter.setStretchFactor(0, 3)
         splitter.setStretchFactor(1, 2)
+        # Жёсткие стартовые доли: раскладка не «прыгает» от подсказок размера
+        splitter.setSizes([int(START_WIDTH * 3 / 5), int(START_WIDTH * 2 / 5)])
+        self.splitter = splitter
         root.addWidget(splitter, 1)
 
         self.progress = QProgressBar()
@@ -135,7 +197,9 @@ class MainWindow(QMainWindow):
         self.video_label = QLabel("Ожидание кадра...")
         self.video_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.video_label.setStyleSheet("background-color: black; color: #888888;")
-        self.video_label.setMinimumSize(480, 360)
+        # Без минимума: превью должно занимать всё место, которое даёт окно,
+        # и масштабироваться вместе с ним (свои границы задаёт только окно)
+        self.video_label.setMinimumSize(0, 0)
         self.video_label.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Ignored)
         layout.addWidget(self.video_label, 1)
 
@@ -163,7 +227,8 @@ class MainWindow(QMainWindow):
 
         self.device_combo = QComboBox()
         self.device_combo.setEditable(True)
-        self.device_combo.currentTextChanged.connect(self._restart_capture)
+        # Смена устройства: перезапуск захвата и новый список разрешений камеры
+        self.device_combo.currentTextChanged.connect(self._on_device_changed)
         self.btn_refresh = QPushButton("Обновить")
         self.btn_refresh.clicked.connect(self._refresh_devices)
         self.btn_repair = QPushButton("Починить")
@@ -180,11 +245,25 @@ class MainWindow(QMainWindow):
         form.addRow("Устройство:", device_row)
 
         self.res_combo = QComboBox()
-        self.res_combo.addItems(["640x480", "320x240"])
+        self.res_combo.setEditable(True)
+        # Список заполняется из драйвера в _refresh_resolutions(),
+        # редактируемое поле позволяет ввести своё разрешение вручную
+        self.res_combo.addItems([f"{w}x{h}" for w, h in FALLBACK_RESOLUTIONS])
         self.res_combo.currentTextChanged.connect(self._restart_capture)
         form.addRow("Разрешение:", self.res_combo)
 
+        # Подсказка: на какое максимальное разрешение способна камера
+        self.res_info = QLabel("—")
+        self.res_info.setStyleSheet("color: #666666;")
+        self.res_info.setWordWrap(True)
+        self.res_info.setToolTip(
+            "Максимальный режим, который поддерживает камера.\n"
+            "Большие разрешения дают меньший fps и выше нагрузку на USB."
+        )
+        form.addRow("", self.res_info)
+
         self.cam_fps_combo = QComboBox()
+        self.cam_fps_combo.setEditable(True)
         self.cam_fps_combo.addItems(["30", "60", "15"])
         self.cam_fps_combo.currentTextChanged.connect(self._restart_capture)
         form.addRow("FPS камеры:", self.cam_fps_combo)
@@ -279,6 +358,25 @@ class MainWindow(QMainWindow):
 
     # --------------------------------------------------------- настройки
 
+    def _read_resolution(self) -> tuple[int, int]:
+        """Разбирает поле «Разрешение» (можно ввести своё, например 1024x576)."""
+        text = self.res_combo.currentText().strip().lower().replace(" ", "")
+        for sep in ("x", "х", "*", ","):
+            if sep in text:
+                left, _, right = text.partition(sep)
+                try:
+                    width, height = int(left), int(right)
+                except ValueError:
+                    break
+                if width > 0 and height > 0:
+                    return width, height
+                break
+        self.log(
+            f"Разрешение «{self.res_combo.currentText()}» не распознано, "
+            f"остаётся {self.config.width}x{self.config.height}"
+        )
+        return self.config.width, self.config.height
+
     def _load_config_into_ui(self) -> None:
         cfg = self.config
         self.res_combo.setCurrentText(f"{cfg.width}x{cfg.height}")
@@ -299,8 +397,7 @@ class MainWindow(QMainWindow):
         """Переносит значения из интерфейса в config и сохраняет его."""
         cfg = self.config
         cfg.device_name = self.device_combo.currentText().strip()
-        width, height = self.res_combo.currentText().split("x")
-        cfg.width, cfg.height = int(width), int(height)
+        cfg.width, cfg.height = self._read_resolution()
         cfg.cam_fps = int(self.cam_fps_combo.currentText())
         cfg.interval_sec = self.interval_spin.value()
         cfg.out_fps = int(self.out_fps_combo.currentText())
@@ -312,6 +409,7 @@ class MainWindow(QMainWindow):
         cfg.keep_frames = self.keep_frames_check.isChecked()
         cfg.preview_smooth = self.smooth_check.isChecked()
         cfg.ffmpeg_path = dshow.find_ffmpeg(cfg.ffmpeg_path)
+        # Размер окна не привязан к полям интерфейса — его хранит _remember_geometry
         try:
             cfg.save()
         except OSError as exc:
@@ -335,6 +433,108 @@ class MainWindow(QMainWindow):
 
     # ------------------------------------------------------------- камера
 
+    def _on_device_changed(self) -> None:
+        """Смена устройства в списке: обновляет разрешения и перезапускает захват.
+
+        Сигнал приходит на каждое изменение текста, в том числе на каждую
+        нажатую клавишу и на программный setCurrentText. Поэтому работаем
+        только когда выбран существующий девайс и это действительно новое имя.
+        """
+        device_name = self.device_combo.currentText().strip()
+        if not device_name or device_name == self._last_device_name:
+            return
+        self._last_device_name = device_name
+        # Разрешения обновляем в фоне: ffmpeg -list_options грузит камеру на
+        # 0.4-2 с, и синхронный вызов подвешивал окно при смене устройства
+        self._refresh_resolutions_async()
+        self._restart_capture()
+
+    def _refresh_resolutions_async(self) -> None:
+        """Обновляет список разрешений в фоне, не блокируя интерфейс.
+
+        ffmpeg -list_options загружает камеру и отвечает за 0.4-2 с. Пока он
+        работает, окно должно оставаться живым (перетаскивание, кнопки), иначе
+        смена устройства выглядит как зависание.
+        """
+        device_name = self.device_combo.currentText().strip()
+        if not device_name:
+            return
+        known = dshow.list_devices(self.config.ffmpeg_path)
+        if device_name not in known:
+            return
+        key = (device_name, self.res_combo.currentText().strip())
+        self._modes_pending = key
+        self.res_info.setText("Максимум камеры: определение...")
+        self.log(f"Опрос режимов камеры «{device_name}»...")
+
+        def _probe() -> None:
+            try:
+                modes = dshow.list_modes(self.config.ffmpeg_path, device_name)
+            except Exception as exc:  # noqa: BLE001 - сбой ffmpeg не должен ронять окно
+                modes = []
+                message = f"Не удалось получить список режимов камеры: {exc}"
+            else:
+                message = ""
+            # Возврат в GUI-поток: виджеты нельзя трогать из рабочего потока
+            QTimer.singleShot(0, lambda: self._apply_modes(key, modes, message))
+
+        threading.Thread(target=_probe, name="list-modes", daemon=True).start()
+
+    def _apply_modes(
+        self, key: tuple[str, str], modes: list[tuple[str, int, int, float]], message: str
+    ) -> None:
+        """Применяет режимы, полученные в фоне, к списку разрешений.
+
+        Опрос камеры идёт асинхронно: пока он шёл, пользователь мог выбрать
+        другое устройство, поэтому устаревший результат игнорируется.
+        """
+        if message:
+            self.log(message)
+        # Устройство сменилось за время опроса: результат больше не актуален
+        if key != self._modes_pending:
+            return
+
+        if not modes:
+            self.res_info.setText(
+                "Максимум камеры: не удалось определить (нет устройства или драйвер не ответил)"
+            )
+            self.log("Режимы камеры не получены, список разрешений оставлен без изменений")
+            return
+
+        # Режим = разрешение + максимальный fps; уникальные разрешения для списка,
+        # сортировка по возрастанию площади кадра
+        unique: dict[tuple[int, int], float] = {}
+        for _pixel_format, width, height, fps in modes:
+            res_key = (width, height)
+            if res_key not in unique or fps > unique[res_key]:
+                unique[res_key] = fps
+        ordered = sorted(unique.items(), key=lambda item: (item[0][0] * item[0][1], item[0][0]))
+
+        # Выбранное разрешение: до перезаполнения списка и после него
+        previous = self.res_combo.currentText().strip()
+        _, previous_selected = key
+        items = [f"{width}x{height}" for (width, height) in unique]
+        self.res_combo.blockSignals(True)
+        self.res_combo.clear()
+        self.res_combo.addItems(items)
+        if previous and previous in items:
+            self.res_combo.setCurrentText(previous)
+        elif previous_selected and previous_selected in items:
+            self.res_combo.setCurrentText(previous_selected)
+        self.res_combo.blockSignals(False)
+
+        # Самое большое разрешение — обычно оно и есть максимум камеры
+        (max_w, max_h), max_fps = ordered[-1]
+        mode_list = ", ".join(f"{w}x{h}@{fps:g}" for (w, h), fps in ordered)
+        self.res_info.setText(f"Максимум камеры: {max_w}x{max_h} @ {max_fps:g} fps")
+        self.res_info.setToolTip(
+            "Все режимы, которые отдаёт камера (разрешение@максимальный fps):\n"
+            f"{mode_list}\n\n"
+            "Большие разрешения дают меньший fps и выше нагрузку на USB."
+        )
+        device_name, _selected = key
+        self.log(f"Камера «{device_name}» поддерживает разрешения: {', '.join(items)}")
+
     def _refresh_devices(self) -> None:
         devices = dshow.list_devices(self.config.ffmpeg_path)
         current = self.device_combo.currentText().strip() or self.config.device_name
@@ -346,6 +546,8 @@ class MainWindow(QMainWindow):
             self.device_combo.setCurrentText(devices[0])
             self.log(f"Устройство «{current}» не найдено, выбрано «{devices[0]}»")
         self.log("Видеоустройства DirectShow: " + (", ".join(devices) if devices else "не найдены"))
+        # Список разрешений берётся из выбранного устройства (в фоне)
+        self._refresh_resolutions_async()
 
     def _repair_camera_on_start(self) -> None:
         """Лечит устройство камеры при старте: при ошибке (код 10) перезапускает его."""
@@ -747,9 +949,19 @@ class MainWindow(QMainWindow):
 
     def closeEvent(self, event) -> None:  # noqa: N802
         self.log("Закрытие приложения")
+        self._remember_geometry()
         self.shutdown()
         try:
             self._collect_config()
         except (OSError, ValueError):
             pass
         event.accept()
+
+    def _remember_geometry(self) -> None:
+        """Запоминает текущий размер окна, чтобы следующий запуск открылся таким же."""
+        size = self.size()
+        width, height = size.width(), size.height()
+        if width <= 0 or height <= 0 or self.isMaximized() or self.isFullScreen():
+            return
+        self.config.window_width = width
+        self.config.window_height = height

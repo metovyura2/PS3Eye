@@ -23,11 +23,11 @@ from PIL import Image, ImageFilter  # noqa: E402
 from PyQt6.QtWidgets import QApplication  # noqa: E402
 
 from app.config import AppConfig  # noqa: E402
-from app.ui import MainWindow  # noqa: E402
+from app.ui import START_HEIGHT, START_WIDTH, MainWindow  # noqa: E402
 
 OUT = os.path.join(ROOT, "assets", "preview.png")
 RAW = os.path.join(ROOT, "temp", "preview_raw.png")
-WINDOW_SIZE = (1220, 780)
+WINDOW_SIZE = (START_WIDTH, START_HEIGHT)
 # Сколько ждать кадры камеры перед снимком
 CAPTURE_WAIT_SEC = 10.0
 # Радиус размытия области превью (пикселей): полностью скрывает детали кадра

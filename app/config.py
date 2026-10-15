@@ -43,6 +43,14 @@ class AppConfig:
     preview_smooth: bool = False      # сглаживать превью (рябь PS Eye при слабом свете)
     codec: str = "libx264"
     ffmpeg_path: str = DEFAULT_FFMPEG
+    window_width: int = 1220          # стартовый/последний размер окна
+    window_height: int = 780
+
+    def window_size(self) -> tuple[int, int]:
+        """Стартовый размер окна: последний сохранённый или значение по умолчанию."""
+        width = self.window_width if isinstance(self.window_width, int) else 0
+        height = self.window_height if isinstance(self.window_height, int) else 0
+        return max(width, 0), max(height, 0)
 
     @classmethod
     def load(cls, path: str | None = None) -> "AppConfig":
@@ -59,6 +67,11 @@ class AppConfig:
                         setattr(config, key, value)
             except (OSError, ValueError):
                 pass
+        # Старый config.json мог быть записан до появления этих полей
+        if not isinstance(config.window_width, int) or config.window_width < 640:
+            config.window_width = 1220
+        if not isinstance(config.window_height, int) or config.window_height < 480:
+            config.window_height = 780
         return config
 
     def save(self, path: str | None = None) -> None:

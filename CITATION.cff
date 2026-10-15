@@ -12,8 +12,8 @@ authors:
 repository-code: "https://github.com/metovyura2/PS3Eye"
 url: "https://github.com/metovyura2/PS3Eye"
 license: MIT
-version: 1.0.0
-date-released: "2026-10-04"
+version: 1.1.0
+date-released: "2026-10-15"
 keywords:
   - ps3 eye
   - ps3eye
