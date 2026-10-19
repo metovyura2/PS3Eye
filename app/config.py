@@ -45,6 +45,7 @@ class AppConfig:
     ffmpeg_path: str = DEFAULT_FFMPEG
     window_width: int = 1220          # стартовый/последний размер окна
     window_height: int = 780
+    panel_width: int = 640            # ширина правой панели настроек (запоминается)
 
     def window_size(self) -> tuple[int, int]:
         """Стартовый размер окна: последний сохранённый или значение по умолчанию."""
@@ -72,6 +73,8 @@ class AppConfig:
             config.window_width = 1220
         if not isinstance(config.window_height, int) or config.window_height < 480:
             config.window_height = 780
+        if not isinstance(config.panel_width, int) or config.panel_width < 400:
+            config.panel_width = 640
         return config
 
     def save(self, path: str | None = None) -> None:

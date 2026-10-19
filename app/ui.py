@@ -12,6 +12,7 @@ import cv2
 from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtGui import QIcon, QImage, QPixmap
 from PyQt6.QtWidgets import (
+    QAbstractItemView,
     QApplication,
     QCheckBox,
     QComboBox,
@@ -68,6 +69,14 @@ START_HEIGHT = 780
 # Ниже этого окно не сжимается, иначе панель настроек и превью ломаются
 MIN_WIDTH = 900
 MIN_HEIGHT = 620
+# Меньше этого панель не сжимается: иначе обрезаются подписи и поля ввода
+PANEL_MIN_WIDTH = 520
+# Верхняя граница ширины панели: остальное отдаём превью
+PANEL_MAX_WIDTH = 760
+# Минимум, который оставляем превью в широком окне
+MIN_PREVIEW_WIDTH = 320
+# Минимальная ширина раскрытого списка устройств: длинные имена камер видны целиком
+DEVICE_POPUP_WIDTH = 560
 
 
 def window_icon() -> QIcon | None:
@@ -98,7 +107,14 @@ class MainWindow(QMainWindow):
         self._last_device_name = ""
         # Устройство и разрешение, для которых сейчас идёт фоновый опрос режимов
         self._modes_pending = ("", "")
+        # Камеры в списке: текст пункта -> реальное имя устройства
+        self._device_entries: dict[str, str] = {}
+        # Имена и статусы камер, найденных в системе (PowerShell/Get-PnpDevice)
+        self._camera_entries: list[tuple[str, str]] = []
+        self._system_camera_names: list[str] = []
         self._shutting_down = False
+        # Ширина окна при первом показе (без рамки): от неё считаются доли превью/панели
+        self._initial_width = max(self.config.window_size()[0], START_WIDTH)
 
         self.setWindowTitle("PSEyes — таймлапс с камеры Sony PS Eye")
         icon = window_icon()
@@ -128,24 +144,28 @@ class MainWindow(QMainWindow):
     # ------------------------------------------------------------------ UI
 
     def _apply_initial_geometry(self) -> None:
-        """Задаёт фиксированный стартовый размер окна и центрирует его.
+        """Задаёт стартовый размер окна и центрирует его.
 
-        Размер считается от рабочего стола основного экрана и ограничен
-        сверху константой START_WIDTH/START_HEIGHT: при первом показе окно
-        не растягивается по ширине монитора, а открывается компактно. Дальше
-        пользователь может тянуть окно как обычно (min/max заданы ниже).
+        Ширина окна — не меньше START_WIDTH, чтобы панель настроек получила
+        ширину из config.json (panel_width), и не больше рабочего стола (на большом
+        экране окно открывается шире, чтобы названия камер были видны целиком).
         """
-        self.setMinimumSize(MIN_WIDTH, MIN_HEIGHT)
-
+        # Минимум окна растёт вместе с панелью: на узком экране окно не должно
+        # быть шире рабочего стола из-за PANEL_MIN_WIDTH
         screen = QApplication.primaryScreen()
+        min_width = MIN_WIDTH
+        if screen is not None:
+            min_width = min(max(min_width, PANEL_MIN_WIDTH + MIN_PREVIEW_WIDTH), screen.availableGeometry().width())
+        self.setMinimumSize(min_width, MIN_HEIGHT)
+
         if screen is None:
             base_width, base_height = self.config.window_size()
-            self.resize(base_width, base_height)
+            self.resize(max(base_width, START_WIDTH), base_height)
             return
 
         area = screen.availableGeometry()
         base_width, base_height = self.config.window_size()
-        width = min(base_width, area.width())
+        width = min(max(base_width, START_WIDTH), area.width())
         height = min(base_height, area.height())
         # Окно не шире рабочего стола, но и не уже минимума
         width = max(width, min(MIN_WIDTH, area.width()))
@@ -166,10 +186,12 @@ class MainWindow(QMainWindow):
         splitter.addWidget(self._build_preview())
         splitter.addWidget(self._build_panel())
         splitter.setChildrenCollapsible(False)
-        splitter.setStretchFactor(0, 3)
-        splitter.setStretchFactor(1, 2)
-        # Жёсткие стартовые доли: раскладка не «прыгает» от подсказок размера
-        splitter.setSizes([int(START_WIDTH * 3 / 5), int(START_WIDTH * 2 / 5)])
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 0)
+        # Жёсткие стартовые доли: раскладка не «прыгает» от подсказок размера.
+        # Ширина главного окна на этом этапе ещё не равна заданной в _apply_initial_geometry
+        # (включает рамки), поэтому доли считаются от центрального виджета
+        splitter.setSizes(list(self._split_sizes(self._initial_width)))
         self.splitter = splitter
         root.addWidget(splitter, 1)
 
@@ -212,8 +234,23 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.preview_info)
         return box
 
+    def _split_sizes(self, width: int) -> tuple[int, int]:
+        """Ширины превью и панели настроек для окна заданной ширины.
+
+        Панель получает сохранённую ширину (по умолчанию 640 px): длинные
+        названия камер и пути видны целиком, а лишнее место забирает превью.
+        """
+        panel = max(
+            min(width - MIN_PREVIEW_WIDTH, self.config.panel_width, PANEL_MAX_WIDTH),
+            PANEL_MIN_WIDTH,
+        )
+        return width - panel, panel
+
     def _build_panel(self) -> QWidget:
         panel = QWidget()
+        # Стартовая ширина задаётся жёстко (как preferred size сплиттера):
+        # при первом показе QSplitter иначе делит место по sizeHint, не читая setSizes
+        panel.setMinimumWidth(self.config.panel_width)
         layout = QVBoxLayout(panel)
         layout.addWidget(self._build_camera_group())
         layout.addWidget(self._build_timelapse_group())
@@ -227,9 +264,20 @@ class MainWindow(QMainWindow):
 
         self.device_combo = QComboBox()
         self.device_combo.setEditable(True)
+        self.device_combo.setInsertPolicy(QComboBox.InsertPolicy.NoInsert)
+        self.device_combo.setSizeAdjustPolicy(
+            QComboBox.SizeAdjustPolicy.AdjustToMinimumContentsLengthWithIcon
+        )
+        self.device_combo.setToolTip(
+            "Список всех камер, подключённых к ПК: системные (PnP) и доступные\n"
+            "DirectShow. Занятая другой программой камера помечается как недоступная."
+        )
         # Смена устройства: перезапуск захвата и новый список разрешений камеры
         self.device_combo.currentTextChanged.connect(self._on_device_changed)
+        # Подсказка со статусом выбранной камеры (работает / ошибка / не подключено)
+        self.device_combo.currentTextChanged.connect(self._update_device_tooltip)
         self.btn_refresh = QPushButton("Обновить")
+        self.btn_refresh.setToolTip("Перечитать все камеры, подключённые к ПК")
         self.btn_refresh.clicked.connect(self._refresh_devices)
         self.btn_repair = QPushButton("Починить")
         self.btn_repair.setToolTip(
@@ -243,6 +291,12 @@ class MainWindow(QMainWindow):
         device_layout.addWidget(self.btn_refresh)
         device_layout.addWidget(self.btn_repair)
         form.addRow("Устройство:", device_row)
+        # Названия камер длинные («… — ошибка (код 10)»): список раскрывается
+        # по самой длинной строке и шире поля ввода
+        view = self.device_combo.view()
+        view.setMinimumWidth(DEVICE_POPUP_WIDTH)
+        view.setSizeAdjustPolicy(QAbstractItemView.SizeAdjustPolicy.AdjustToContents)
+        view.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
 
         self.res_combo = QComboBox()
         self.res_combo.setEditable(True)
@@ -396,7 +450,7 @@ class MainWindow(QMainWindow):
     def _collect_config(self) -> AppConfig:
         """Переносит значения из интерфейса в config и сохраняет его."""
         cfg = self.config
-        cfg.device_name = self.device_combo.currentText().strip()
+        cfg.device_name = self._selected_device()
         cfg.width, cfg.height = self._read_resolution()
         cfg.cam_fps = int(self.cam_fps_combo.currentText())
         cfg.interval_sec = self.interval_spin.value()
@@ -440,7 +494,7 @@ class MainWindow(QMainWindow):
         нажатую клавишу и на программный setCurrentText. Поэтому работаем
         только когда выбран существующий девайс и это действительно новое имя.
         """
-        device_name = self.device_combo.currentText().strip()
+        device_name = self._selected_device()
         if not device_name or device_name == self._last_device_name:
             return
         self._last_device_name = device_name
@@ -456,11 +510,19 @@ class MainWindow(QMainWindow):
         работает, окно должно оставаться живым (перетаскивание, кнопки), иначе
         смена устройства выглядит как зависание.
         """
-        device_name = self.device_combo.currentText().strip()
+        device_name = self._selected_device()
         if not device_name:
             return
+        # Недоступные (занятые/в ошибке) камеры не опрашиваем: это лишний
+        # захват USB и лишние 2 секунды ожидания впустую
         known = dshow.list_devices(self.config.ffmpeg_path)
+        if device_name not in known and device_name not in self._system_camera_names:
+            return
         if device_name not in known:
+            self.res_info.setText(
+                "Максимум камеры: недоступно (камера занята или в ошибке)"
+            )
+            self.log(f"Камера «{device_name}» недоступна для опроса режимов")
             return
         key = (device_name, self.res_combo.currentText().strip())
         self._modes_pending = key
@@ -492,6 +554,9 @@ class MainWindow(QMainWindow):
             self.log(message)
         # Устройство сменилось за время опроса: результат больше не актуален
         if key != self._modes_pending:
+            return
+        # Режимы могли прийти, когда камера уже сменилась на недоступную
+        if self._selected_device() != key[0]:
             return
 
         if not modes:
@@ -535,19 +600,96 @@ class MainWindow(QMainWindow):
         device_name, _selected = key
         self.log(f"Камера «{device_name}» поддерживает разрешения: {', '.join(items)}")
 
+    def _selected_device(self) -> str:
+        """Выбранное устройство без служебной пометки в списке."""
+        return self._device_entries.get(self.device_combo.currentText().strip(), "").strip()
+
+    def _update_device_tooltip(self) -> None:
+        """Подсказка со статусом выбранной камеры: что именно нашлось в системе."""
+        name = self._selected_device()
+        if not name:
+            return
+        statuses = [status for cam, status in self._camera_entries if cam == name]
+        if statuses:
+            note = ", ".join(dshow.device_status_label(status) for status in statuses)
+        else:
+            note = "нет в системе"
+        self.device_combo.setToolTip(
+            "Список всех камер, подключённых к ПК: системные (PnP) и доступные\n"
+            "DirectShow. Занятая другой программой камера помечается как недоступная.\n\n"
+            f"Выбрано: «{name}» — {note}"
+        )
+
     def _refresh_devices(self) -> None:
-        devices = dshow.list_devices(self.config.ffmpeg_path)
-        current = self.device_combo.currentText().strip() or self.config.device_name
+        """Перечитывает список камер, подключённых к ПК.
+
+        Источники дополняют друг друга: ffmpeg (DirectShow) видит только
+        свободные устройства, PowerShell (Get-PnpDevice) — вообще все камеры,
+        включая занятые другой программой.
+        """
+        directshow = dshow.list_devices(self.config.ffmpeg_path)
+        system_cameras = dshow.list_system_cameras()
+        self._camera_entries = list(system_cameras)
+        self._system_camera_names = [name for name, _status in system_cameras]
+
+        entries: list[tuple[str, str]] = []
+        used: set[str] = set()
+        for name in directshow:
+            used.add(name)
+            entries.append((name, "доступна"))
+        for name, status in system_cameras:
+            if name in used:
+                continue
+            used.add(name)
+            entries.append((name, dshow.device_status_label(status)))
+        # Камера могла быть введена вручную или сохранена в настройках — не теряем её
+        current = self._selected_device() or self.config.device_name.strip()
+        if current and current not in used:
+            entries.append((current, "нет в системе"))
+
+        self.device_combo.blockSignals(True)
         self.device_combo.clear()
-        self.device_combo.addItems(devices)
-        if current and current in devices:
-            self.device_combo.setCurrentText(current)
-        elif devices:
-            self.device_combo.setCurrentText(devices[0])
-            self.log(f"Устройство «{current}» не найдено, выбрано «{devices[0]}»")
-        self.log("Видеоустройства DirectShow: " + (", ".join(devices) if devices else "не найдены"))
+        self._device_entries.clear()
+        for name, note in entries:
+            label = f"{name} — {note}"
+            self.device_combo.addItem(label)
+            self._device_entries[label] = name
+        self.device_combo.blockSignals(False)
+
+        # Возвращаем прежний выбор или берём первую доступную камеру
+        if current and current in used:
+            self._set_device_combo(current)
+        else:
+            preferred = next(
+                (name for name in directshow),
+                next((name for name in self._system_camera_names), ""),
+            )
+            if preferred:
+                self._set_device_combo(preferred)
+                if current:
+                    self.log(f"Камера «{current}» не найдена, выбрана «{preferred}»")
+        self._last_device_name = self._selected_device()
+        self._update_device_tooltip()
+
+        available = ", ".join(directshow) if directshow else "не найдены"
+        self.log("Видеоустройства DirectShow: " + available)
+        if system_cameras:
+            self.log(
+                "Камеры в системе: "
+                + ", ".join(f"{name} ({dshow.device_status_label(status)})" for name, status in system_cameras)
+            )
+        elif sys.platform == "win32":
+            self.log("Камеры в системе: не найдены")
         # Список разрешений берётся из выбранного устройства (в фоне)
         self._refresh_resolutions_async()
+
+    def _set_device_combo(self, name: str) -> None:
+        """Выбирает камеру в списке по её имени (без пометки)."""
+        for label, value in self._device_entries.items():
+            if value == name:
+                self.device_combo.setCurrentText(label)
+                return
+        self.device_combo.setCurrentText(name)
 
     def _repair_camera_on_start(self) -> None:
         """Лечит устройство камеры при старте: при ошибке (код 10) перезапускает его."""
@@ -958,10 +1100,14 @@ class MainWindow(QMainWindow):
         event.accept()
 
     def _remember_geometry(self) -> None:
-        """Запоминает текущий размер окна, чтобы следующий запуск открылся таким же."""
+        """Запоминает текущий размер окна и ширину панели настроек."""
         size = self.size()
         width, height = size.width(), size.height()
         if width <= 0 or height <= 0 or self.isMaximized() or self.isFullScreen():
             return
         self.config.window_width = width
         self.config.window_height = height
+        sizes = self.splitter.sizes()
+        # 0 — превью, 1 — панель; после старта/preview_width=0 сплиттера ещё не раскладывался
+        if len(sizes) == 2 and sizes[1] > 0:
+            self.config.panel_width = sizes[1]
